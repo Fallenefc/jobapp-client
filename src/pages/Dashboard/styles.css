@@ -1,0 +1,17 @@
+.job-card-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.loading-text {
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.dashboard-container {
+  background-color: var(--color-background);
+  height: 93%;
+  width: 100%;
+}

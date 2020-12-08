@@ -6,7 +6,21 @@
 }
   
 body {
-  background: #f5f5f5;
+  background: var(--color-background);
   font: 14px sans-serif;
   color: #333;
+}
+
+:root {
+  --color-primary: #FEFFFF;
+  --color-primary-darker: #DEF2F1;
+  --color-primary-darkest: #d2e2e0;
+  --color-primary-evendarker: #c9e9e9;
+  --color-background: #3AAFA9;
+  --color-secondary: #2B7A78;
+  --color-secondary-darker: #17252A;
+}
+
+.App {
+  height: 100vh;
 }
