@@ -4,6 +4,8 @@ import { useState } from 'react';
 import Tags from '../../components/Tags/Tags';
 import Level from '../../components/Level/Level';
 import { tagsArray, levelsArray } from '../../utils/utils';
+import axios from 'axios';
+import api from '../../services/api';
 
 export default function AddJob() {
 
@@ -17,12 +19,12 @@ export default function AddJob() {
     contactName: '',
     contactNumber: '',
     email: '',
-    website: {type: '', required: false}
+    website: ''
   },
   location: '',
   term: '',
   level: '',
-  wage: {type: null, required: false},
+  wage: 0,
   description: '',
   tags: [] //remove this
   });
@@ -54,10 +56,13 @@ export default function AddJob() {
     console.log(addingJobs)
   }
 
+  const handleSubmit = () => {
+    api.post('/job', addingJobs)
+  }
 
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
 
       <label for="title">Job Title:</label>
       <input type="text" id="title" name="title" value={addingJobs.title} onChange={handleChange}></input> <br></br>
@@ -94,6 +99,7 @@ export default function AddJob() {
 
       {tags.map(tag => <Tags name={tag.name} selected={tag.selected} toggleSelected={tagsToggleSelected} />)}
 
+      <button type='submit'>Submit</button>
       </form>
     </div>
   )
