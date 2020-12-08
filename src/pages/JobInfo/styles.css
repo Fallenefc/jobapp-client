@@ -26,19 +26,18 @@
 
 .jobinfo {
   width: 90%;
-  height: 100%;
   border-radius: 15px;
   background-color: var(--color-primary);
   display: flex;
   flex-direction: column;
   padding: 20px;
+  overflow-y: scroll;
 }
 
 .jobinfo-title {
-  font-size: 24px;
-  font-weight: 600;
-  padding: 20px;
-  margin: 10px;
+  font-size: 28px;
+  font-weight: 700;
+  padding: 0 20px 20px 20px;
 }
 
 .description {
@@ -53,6 +52,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 15px 0;
 }
 
 .jobinfo-text {
@@ -62,5 +62,13 @@
 
 .company {
   margin: auto;
+  padding: 15px 0px;
   font-size: 24px;
+}
+
+.job-description {
+  font-size: 17px;
+  font-weight: 400;
+  margin-top: 20px;
+  text-align: justify;
 }
